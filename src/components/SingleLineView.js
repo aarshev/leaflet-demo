@@ -7,8 +7,10 @@ export const SingleLineView = () => {
     return (
         <>
             <DropDownRoute />
-            <SingleLineList />
-            <SingleLineMap />
+            <div className="mainView">
+                <SingleLineList />
+                <SingleLineMap />
+            </div>
         </>
     )
 }

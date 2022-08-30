@@ -14,7 +14,7 @@ export const SingleLineMap = () => {
     console.log(lines)
 
     return (
-        <MapContainer center={[42.698334, 23.319941]} zoom={13} scrollWheelZoom={true}>
+        <MapContainer center={[42.698334, 23.319941]} zoom={12} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

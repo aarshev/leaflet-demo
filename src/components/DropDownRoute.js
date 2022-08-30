@@ -20,14 +20,15 @@ export const DropDownRoute = () => {
 
 
     return (
-        <>
-            <select name="route" id="dropdownRoute" onChange={handleChange}>
+        <div>
+            <span className='dropDownSpan'>Please select a route</span>
+            <select className='transportDropdown' name="route" id="dropdownRoute" onChange={handleChange}>
                 <option value="0" defaultValue={true}>Route 1</option>
                 <option value="1">Route 2</option>
             </select>
-            <button onClick={btnOnClickHandler}>
+            <button className='btn' onClick={btnOnClickHandler}>
                 Go to main view
             </button>
-        </>
+        </div>
     )
 }

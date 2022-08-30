@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .App-logo {
@@ -38,8 +40,8 @@
 }
 
 .leaflet-container{
-  width: 100vw;
-  height: 80vh;
+  width: 45vw;
+  height: 60vh;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -54,4 +56,85 @@
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  background-color: #80c0e0;
+}
+
+.mainView{
+  margin-top: 40px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tableDivLine{
+  width: 50%;
+}
+
+.tableLine{
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+.tableLine td, .tableLine th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tableLine th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #02035e;
+  color: white;
+}
+
+.tableLine tr:nth-child(odd){background-color: #859eab;}
+
+.tableLine tr:nth-child(even){background-color: #f2f2f2;}
+
+.tableLine tr:hover {background-color: grey ;cursor: pointer;}
+
+.tableStop{
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+.tableStop td, .tableStop th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.tableStop tr:nth-child(odd){background-color: #859eab;}
+
+.tableStop tr:nth-child(even){background-color: #f2f2f2;}
+
+
+.tableStop th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #02035e;
+  color: white;
+}
+
+.transportDropdown{
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.dropDownSpan{
+  font-size: 30px;
+}
+
+.btn{
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #000;
+	border-radius: 8px;
+	color: #000;
+	font-size: 16px;
+	padding: 5px 8px;
+  margin-left: 10px;
+  cursor: pointer;
 }

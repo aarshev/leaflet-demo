@@ -9,13 +9,13 @@ export const LineMap = () => {
 
     console.log(lines)
 
-    function onPolylineClick(line){
-        
+    function onPolylineClick(line) {
+
         navigate(`/${line}`);
     }
 
     return (
-        <MapContainer center={[42.698334, 23.319941]} zoom={13} scrollWheelZoom={true}>
+        <MapContainer center={[42.698334, 23.319941]} zoom={12} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -25,8 +25,12 @@ export const LineMap = () => {
                 currLine.routes.map(route => (
                     route.segments.map(currSegment => (
 
-                        <Polyline key={currSegment.id} positions={currSegment.coordinates} eventHandlers={{ click: ()=>{onPolylineClick(currLine.line)} }}>
-
+                        <Polyline key={currSegment.id} positions={currSegment.coordinates} eventHandlers={{ click: () => { onPolylineClick(currLine.line) } }}>
+                            <Popup>
+                                <div>
+                                    <h3>{currSegment.name}</h3>
+                                </div>
+                            </Popup>
                         </Polyline>
 
                     ))
@@ -34,7 +38,7 @@ export const LineMap = () => {
             ))}
 
             {lines.map(currLine => (
-                currLine.routes.map(route =>(
+                currLine.routes.map(route => (
                     route.stops.map(currStop => (
                         <Marker
                             key={currStop.id}

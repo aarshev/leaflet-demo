@@ -7,8 +7,8 @@ export const LineList = () => {
 
     console.log(lines)
     return (
-        <div>
-            <table>
+        <div className="tableDivLine">
+            <table className="tableLine">
                 <thead>
                     <tr>
                         <th>Line Name</th>

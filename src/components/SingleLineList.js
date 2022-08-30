@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { SingleStop } from "./SingleStop";
@@ -19,15 +18,15 @@ export const SingleLineList = () => {
    
 
     return (
-        <div>
+        <div className="tableDivLine">
             
-            <table>
+            <table className="tableStop">
                 <thead>
                     <tr>
-                        {lines[0].line}
+                        <th>Line: {lines[0].line}</th>
                     </tr>
                     <tr>
-                        <th>Route {Number(route) + 1}</th>
+                        <th>Route {Number(route) + 1} stops</th>
                     </tr>
                 </thead>
                 <tbody>

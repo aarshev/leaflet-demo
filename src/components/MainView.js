@@ -6,8 +6,10 @@ export const MainView = () => {
     return (
         <>
             <DropdownTransport />
-            <LineList />
-            <LineMap />
+            <div className="mainView"> 
+                <LineList />
+                <LineMap />
+            </div>
         </>
     )
 }
